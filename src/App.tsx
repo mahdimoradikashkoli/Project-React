@@ -1,6 +1,7 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { AuthLayout } from "./components";
 import React, { Suspense } from "react";
+const LoginPage=React.lazy(()=> import("./pages/loginpage/LoginPage"))
 const GetStarted =React.lazy(() => import("./pages/getstarted/GetStarted"));
 const Register = React.lazy(() => import("./pages/registerpage/Register"));
 
@@ -15,6 +16,14 @@ function App() {
           element: (
             <Suspense fallback={<h1>Loading...</h1>}>
               <Register />
+            </Suspense>
+          ),
+        },
+        {
+          path: "/auth/login",
+          element: (
+            <Suspense fallback={<h1>Loading...</h1>}>
+              <LoginPage/>
             </Suspense>
           ),
         },
