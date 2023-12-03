@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Sacramento&display=swap');
+
+body {
+    font-family: 'Sacramento', cursive;
+    font-family: 'ABeeZee', sans-serif;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
